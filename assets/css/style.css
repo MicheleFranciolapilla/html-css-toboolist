@@ -1,0 +1,33 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: lightblue;
+}
+
+header{
+    background-color: aquamarine;
+}
+
+header > h1{
+    display: inline-block;
+    font-size: 40px;
+}
+
+nav{
+    background-color: aquamarine;
+    width: 80%;
+    border-radius: 5px 5px 0 0;
+    margin: auto;
+    margin-top: 50px;
+    padding: 10px 30px;
+}
+
+.nav_button{
+    padding: 6px 13px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
