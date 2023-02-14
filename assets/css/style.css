@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Roboto Slab', serif;
 }
 
 body{
@@ -44,9 +45,26 @@ main{
     width: 80%;
     border-radius: 0 0 5px 5px;
     margin: auto;
-    padding: 30px 55px;
+    padding: 15px 55px;
 }
 
 section{
     margin: 30px 0;
 }
+
+section > ul{
+    font-size: larger;
+    list-style-type: none;
+}
+
+ul::before{
+    font-size: small;
+    content: "▼ ";
+}
+
+ul > li{
+    font-size: medium;
+    font-weight: 400;
+    line-height: 2em;
+}
+
