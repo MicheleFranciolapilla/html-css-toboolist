@@ -34,10 +34,16 @@ nav{
 }
 
 .nav_button{
+    color: gray;
     padding: 6px 13px;
     border: 1px solid gray;
     border-radius: 5px;
     margin-right: 5px;
+}
+
+.nav_button:first-child{
+    color: white;
+    background-color: blueviolet;
 }
 
 main{
@@ -62,9 +68,62 @@ ul::before{
     content: "▼ ";
 }
 
+li::before{
+    /* display: inline-block; */
+    width: 15px;
+    height: 15px;
+    vertical-align: text-top;
+    border: 2px solid lightgray;
+    color: lightgray;
+    border-radius: 50%;
+    font-size: small;
+    content: "\2713";
+    margin: 5px;
+    padding: 2px 6px;
+}
+
+#nr2 li:nth-child(4):before, #nr3 li:nth-child(2)::before{
+    color: grey;
+    border-color: grey;
+    content: "x";
+}
+
 ul > li{
     font-size: medium;
     font-weight: 400;
     line-height: 2em;
+    color: black;
 }
 
+li > span{
+    color: white;
+    font-size: x-small;
+    padding: 7px 10px;
+    margin-left: 5px;
+    border-radius: 2em;
+    vertical-align: text-top;
+}
+
+.color1{
+    background-color: blueviolet;
+}
+
+.color2{
+    background-color: blue;
+}
+
+.color3{
+    background-color: gray;
+}
+
+.color4{
+    background-color: green;
+}
+
+.color5{
+    background-color: purple;
+}
+
+.color6{
+    background-color: greenyellow;
+}
