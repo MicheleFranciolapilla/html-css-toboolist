@@ -1,3 +1,4 @@
+/* reset attributi box e "attivazione" del google font */
 *{
     box-sizing: border-box;
     margin: 0;
@@ -14,15 +15,18 @@ header{
     padding: 15px;
 }
 
+/* La classe "vertical" attribuita agli elementi dello header, posiziona gli stessi come richiesto */
 .vertical{
     vertical-align: middle;
 }
 
+/* Maggior dimensione al titolo e posizionamento a fianco del logo */
 header > h1{
     display: inline-block;
     font-size: 40px;
 }
 
+/* Settore "navigazione" che conterra' i due pulsanti*/
 nav{
     background-color: aquamarine;
     width: 80%;
@@ -33,6 +37,7 @@ nav{
     padding: 10px 55px;
 }
 
+/* Classe relativa ai due pulsanti */
 .nav_button{
     color: gray;
     padding: 6px 13px;
@@ -41,6 +46,7 @@ nav{
     margin-right: 5px;
 }
 
+/* Colore e sfondo del primo dei due pulsanti (il secondo mantiene gli attributi della classe) */
 .nav_button:first-child{
     color: white;
     background-color: blueviolet;
@@ -58,16 +64,20 @@ section{
     margin: 30px 0;
 }
 
+/* Formattazione dei capilista */
 section > ul{
     font-size: larger;
     list-style-type: none;
 }
 
+/* Posizionamento del carattere speciale prima del capolista */
 ul::before{
     font-size: small;
     content: "▼ ";
 }
 
+/* Formattazione (per mezzo dello speudo selettore "::before") con il cerchietto e la spunta (che poi verra' sostituita dalla "x" in due soli casi) che fungono da marcatori dei vari "li". */
+/* Dopo svariati tentativi si e' giunti al codice seguente */
 li::before{
     /* display: inline-block; */
     width: 15px;
@@ -82,12 +92,16 @@ li::before{
     padding: 2px 6px;
 }
 
+/* Settaggio degli unici due elementi (marcatori di lista) che presentano il simbolo "x" al posto della spunta */
+/* L'indirizzamento al singolo elemento avviene tramite gli pseudo selettori ":nth-child()" e "::before" */
+/* L'indice dello pseudo selettore "nth-child()" e' incrementato di 1 unita' a causa della presenza del tag "strong" */
 #nr2 li:nth-child(4):before, #nr3 li:nth-child(2)::before{
     color: grey;
     border-color: grey;
     content: "x";
 }
 
+/* Si formatta il testo per tutti gli "li". In realta', la forma (ul>li), in questo specifico caso potrebbe anche essere sostituita dalla semplice (li), non essendoci compresenza di liste "ordered" e "unordered" */
 ul > li{
     font-size: medium;
     font-weight: 400;
@@ -95,6 +109,7 @@ ul > li{
     color: black;
 }
 
+/* Formattazione degli span (pilloline colorate) affiancati (facenti parte) degli "li" */
 li > span{
     color: white;
     font-size: x-small;
