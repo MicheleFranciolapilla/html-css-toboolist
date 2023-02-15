@@ -1,0 +1,156 @@
+/* reset attributi box e "attivazione" del google font */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Slab', serif;
+}
+
+body{
+    background-color: lightblue;
+}
+
+header{
+    background-color: aquamarine;
+    padding: 15px;
+}
+
+/* La classe "vertical" attribuita agli elementi dello header, posiziona gli stessi come richiesto */
+.vertical{
+    vertical-align: middle;
+}
+
+/* Maggior dimensione al titolo e posizionamento a fianco del logo */
+header > h1{
+    display: inline-block;
+    font-size: 40px;
+}
+
+/* Settore "navigazione" che conterra' i due pulsanti*/
+nav{
+    background-color: aquamarine;
+    width: 80%;
+    border-radius: 5px 5px 0 0;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 3px;
+    padding: 10px 55px;
+}
+
+/* Classe relativa ai due pulsanti */
+.nav_button{
+    color: gray;
+    padding: 6px 13px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+/* Colore e sfondo del primo dei due pulsanti (il secondo mantiene gli attributi della classe) */
+.nav_button:first-child{
+    color: white;
+    background-color: blueviolet;
+}
+
+main{
+    background-color: aquamarine;
+    width: 80%;
+    border-radius: 0 0 5px 5px;
+    margin: auto;
+    padding: 15px 55px;
+}
+
+section{
+    margin: 30px 0;
+}
+
+/* Formattazione dei capilista */
+section > ul{
+    /* L'attributo seguente ha consentino di eliminare il tag "strong" all'interno dell'HTML, facendo cosi' in modo che l'indirizzamento ai singoli "li" non sia sfasato di una unita' */
+    font-weight: 800;
+    font-size: larger;
+    list-style-type: none;
+}
+
+/* Posizionamento del carattere speciale prima del capolista */
+ul::before{
+    font-size: small;
+    content: "▼ ";
+}
+
+/* Formattazione degli li */
+ul > li{
+    font-size: medium;
+    font-weight: 400;
+    line-height: 2em;
+    color: black;
+}
+
+/* Formattazione (per mezzo dello speudo selettore "::before") con il cerchietto e la spunta (che poi verra' sostituita dalla "x" in due soli casi) che fungono da marcatori dei vari "li". */
+li::before{
+    width: 15px;
+    height: 15px;
+    vertical-align: text-top;
+    border: 2px solid lightgray;
+    color: lightgray;
+    border-radius: 50%;
+    font-size: small;
+    content: "\2713";
+    margin: 5px;
+    padding: 2px 6px;
+}
+
+/* Formattazione (per mezzo dello pseudo selettore "::after") della #pillolina#, ovvero del testo su sfondo colorato e con i bordi arrotondati che segue l'li */
+/* In questa fase di formattazione si inizializza il contenuto della #pillolina# a stringa vuota */
+li::after{
+    color: white; 
+    content: "";
+    font-size: x-small;
+    padding: 7px 10px;
+    margin-left: 5px;
+    border-radius: 2em;
+    vertical-align: text-top;
+}
+
+/* Settaggio degli unici due elementi (marcatori di lista) che presentano il simbolo "x" al posto della spunta */
+/* L'indirizzamento al singolo elemento avviene tramite gli pseudo selettori ":nth-child()" e "::before" */
+/* Rispetto alla versione precedente, in questa, si indirizzano gli elementi con un numero che coincide con il loro ordine, avendo rimosso il tag "strong" */
+#nr2 li:nth-child(3):before, #nr3 li:first-child::before{
+    color: grey;
+    border-color: grey;
+    content: "x";
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------ */
+/* IL CODICE SEGUENTE ASSEGNA A CIASCUNA #PILLOLINA# IL PROPRIO CONTENUTO E COLORE */
+/* ------------------------------------------------------------------------------------------------------------------------ */
+
+#nr1 li:first-child::after, #nr2 li:first-child::after, #nr3 li:last-child::after{
+    content: "Editorial";
+    background-color: blueviolet;
+}
+
+#nr2 li:nth-child(2)::after{
+    content: "Q1 Goals";
+    background-color: blue;
+}
+
+#nr2 li:nth-child(3)::after{
+    content: "Recruiting";
+    background-color: gray;
+}
+
+#nr2 li:nth-child(4)::after{
+    content: "Mobile";
+    background-color: green;
+}
+
+#nr3 li:nth-child(2)::after{
+    content: "Website";
+    background-color: purple;
+}
+
+#nr3 li:nth-child(3)::after{
+    content: "Sales";
+    background-color: greenyellow;
+}

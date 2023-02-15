@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<!-- SECONDA VERSIONE DELL'ESERCIZIO -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toboolist - version 2</title>
+    <!-- Link al css esterno -->
+    <link rel="stylesheet" href="assets/css/style - version2.css">
+    <!-- Link al Google font Roboto Slab -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    
+    <!-- Elementi della testata: logo e titolo -->
+    <header>
+        <!-- Allineamento di logo e titolo-->
+        <img class="vertical" src="assets/img/Logo.png" alt="logo Boolean" height="50px">
+        <h1 class="vertical">Toboolist</h1>
+    </header>
+
+    <nav>
+        <button class="nav_button">Add Task</button>
+        <button class="nav_button">Add Section</button>
+    </nav>
+
+    <!-- Corpo principale, contenente le liste, raggruppate in tre sezioni -->
+    <main>
+    <!-- Ciascuna lista ha un id che la enumera. Tali id hanno solo funzione di indirizzamento mediante pseudo selettori  -->
+
+        <section>
+            <ul id="nr1">New Task
+                <li>Quarterly Newsletter</li>
+            </ul>
+        </section>
+
+        <section>
+            <ul id="nr2">Today  
+                <li>Recruiting blog post</li>
+                <li>Mobile app launch</li>
+                <li>Interview John H.</li>
+                <li>Summit update to mobile storefronts</li>
+            </ul>
+        </section>
+
+        <section>
+            <ul id="nr3">Upcoming 
+                <li>Schedule meeting with Alex</li>
+                <li>Homepage refresh</li>
+                <li>Onboard new Sales team members</li>
+                <li>Review editorial calendar</li>
+            </ul>
+        </section>
+        
+    </main>
+    
+</body>
+
+</html>
